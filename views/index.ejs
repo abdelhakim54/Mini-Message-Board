@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Good morning</h1>
+    <p>Welcome <%= name %></p>
+    <% for (let i = 0; i < messages.length ; i++){%>
+      <div>
+        <p> wriiten by <%= messages[i].user%></p>
+        <p> test by <%= messages[i].text%></p>
+        <p> added in  <%= messages[i].added%></p>
+      </div>
+    <%}%>
   </body>
 </html>
